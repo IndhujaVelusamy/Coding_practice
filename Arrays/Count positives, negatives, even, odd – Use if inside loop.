@@ -1,0 +1,45 @@
+//Count positives, negatives, even, odd – Use if inside loop.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		for(int i=0;i<n;i++)
+		a[i] = sc.nextInt();
+		int e=0,o=0,ne=0,p=0;
+		
+		for(int i=0;i<n;i++)
+		{
+		    if(a[i]> 0 && a[i]%2==0)
+		    {
+		    e++;
+		    p++;
+		    }
+		    else if(a[i]<0 && a[i]%2==0)
+		    {
+		        e++;
+		        ne++;
+		    }
+		    else if(a[i]>0 && a[i]%2!=0)
+		    {
+		        p++;
+		        o++;
+		    }
+		    else if(a[i]<0 && a[i]%2!=0)
+		    {
+		        ne++;
+		        o++;
+		    }
+		    else if(a[i]==0)
+		    e++;
+		}
+		System.out.println("Positives : "+p);
+		System.out.println("Negatives : "+ne);
+		System.out.println("Even : "+e);
+		System.out.println("Odd : "+o);
+		
+		
+	}
+}
